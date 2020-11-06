@@ -2,12 +2,12 @@
 
 const team = ['Michael', 'Scottie', 'Dennis', 'Luke', 'Steve']
 
-const itemLocation = (str) => {
-    let query = team.indexOf(str)
+const itemLocation = (str, arr) => {
+    let query = arr.indexOf(str)
     return query
 }
 
-//console.log(itemLocation('Scottie'))
+//console.log(itemLocation('Dennis', team))
 
 // 2. Sum the items of an array
 
@@ -92,4 +92,4 @@ const joinArrays = (arr1, arr2) =>{
     return newArr
 }
 
-console.log(joinArrays(animals, animalPrays))
+//console.log(joinArrays(animals, animalPrays))
