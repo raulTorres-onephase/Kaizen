@@ -44,3 +44,16 @@ const removeItemAtBegining = (arr) => {
 }
 
 //console.log(removeItemAtBegining(spanishRockBands))
+
+// 5. Add an item anywhere in the array
+const harryPotterCharacters = ['Harry', 'Ron', 'Hermione', 'Hagrid', 'Dumbledore', 'Lupin', 'Sirius', 'Snape', 'Voldemort', 'Bellatrix', 'Dobby', 'James']
+
+const addItemRandomly = (item, arr) => {
+    let arrLongitude = arr.length
+    let randomNumber = Math.ceil(Math.random() * (arrLongitude - 1))
+    console.log(randomNumber)
+    arr.splice(randomNumber, 0, item)
+    return arr
+}
+
+console.log(addItemRandomly('Lucius', harryPotterCharacters))
