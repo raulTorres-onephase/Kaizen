@@ -80,5 +80,16 @@ const findDuplicates = (arr) => {
     } return false
 }
 
-console.log(findDuplicates(names))
+//console.log(findDuplicates(names))
 
+// 7. Join together two arrays 
+
+const animals = ['lion', 'cheeta', 'puma', 'cougar', 'tiger']
+const animalPrays = ['zebra', 'antilop', 'deer', 'donkey', 'horse']
+
+const joinArrays = (arr1, arr2) =>{
+    const newArr = [...arr1, ...arr2]
+    return newArr
+}
+
+console.log(joinArrays(animals, animalPrays))
