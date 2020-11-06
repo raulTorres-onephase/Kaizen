@@ -56,4 +56,29 @@ const addItemRandomly = (item, arr) => {
     return arr
 }
 
-console.log(addItemRandomly('Lucius', harryPotterCharacters))
+//console.log(addItemRandomly('Lucius', harryPotterCharacters))
+
+// 6. Find duplicates in an array
+const names = ['carlos', 'rodrigo', 'jorge', 'miguel', 'jorge', 'enrique', 'alfredo']
+const duplicateNumbers = [ 1,2,3,3,4,5,6,8,5,3,2,1]
+const n = [1,2,3,4,5,6]
+
+const findDuplicates = (arr) => {
+    let duplicates = undefined
+    let pointer1 = 0;
+    let pointer2 = arr.length - 1
+    while(pointer1 <= pointer2){
+        valueOne = arr[pointer1]
+        valueTwo = arr[pointer2]
+        if(valueOne === valueTwo){
+            duplicates = valueOne
+            return true
+        }else if (valueOne !== valueTwo){
+            pointer1++
+            pointer2--
+        }
+    } return false
+}
+
+console.log(findDuplicates(names))
+
