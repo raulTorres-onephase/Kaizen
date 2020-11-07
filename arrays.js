@@ -16,7 +16,7 @@ const itemLocation = (str, arr) => {
   return found;
 };
 
-console.log(itemLocation('Scottie', team));
+//console.log(itemLocation('Scottie', team));
 
 // 2. Sum the items of an array
 
@@ -25,7 +25,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const sumArray = (arr) => {
   let total = 0;
   arr.forEach((number) => {
-    total = total + number;
+    total += number;
   });
   return total;
 };
@@ -131,3 +131,35 @@ const joinArrays = (arr1, arr2) => {
 };
 
 //console.log(joinArrays(animals, animalPrays))
+
+// 8. Find all occurrences of an item in an array
+// const duplicateNumbers = [1, 2, 3, 3, 4, 5, 6, 8, 5, 3, 2, 1];
+// const names = [
+//     'carlos',
+//     'rodrigo',
+//     'jorge',
+//     'miguel',
+//     'jorge',
+//     'enrique',
+//     'alfredo',
+//   ];
+
+const findAllOcurrencies = (item, arr) => {
+  let counter = 0;
+  let pointer1 = 0;
+  while (pointer1 <= arr.length + 1) {
+    valueOne = arr[pointer1];
+    if (valueOne === item) {
+      counter++;
+      pointer1++;
+    } else if (valueOne !== item) {
+      pointer1++;
+    }
+  }
+  if (counter === 1) {
+    return `The value ${item} exists but is NOT repeated`;
+  }
+  return `The value ${item} is repeated ${counter} time(s).`;
+};
+
+console.log(findAllOcurrencies('jorge', names));
