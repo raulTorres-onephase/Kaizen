@@ -162,4 +162,5 @@ const findAllOcurrencies = (item, arr) => {
   return `The value ${item} is repeated ${counter} time(s).`;
 };
 
-console.log(findAllOcurrencies('jorge', names));
+//console.log(findAllOcurrencies('jorge', names));
+
