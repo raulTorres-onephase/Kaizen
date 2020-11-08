@@ -13,10 +13,11 @@ const itemLocation = (str, arr) => {
       found = i;
     }
   });
+  if(found === undefined) return "No value found";
   return found;
 };
 
-//console.log(itemLocation('Scottie', team));
+//console.log(itemLocation('fdf', team));
 
 // 2. Sum the items of an array
 

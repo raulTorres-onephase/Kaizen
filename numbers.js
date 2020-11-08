@@ -14,4 +14,4 @@ const convertTo10 = (binary) => {
    return poweredResult
 }
 
-console.log(convertTo10(101100101))
+console.log(convertTo10(10000))

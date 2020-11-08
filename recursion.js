@@ -26,6 +26,11 @@ var fileData = {
       }	
     ]
 }
+// 11. You should be able to return a list of files from the fileData, which can be found at tab Recursion Json
 
-console.log('keys', Object.keys(fileData))
-console.log('values', Object.values(fileData))
+function getFiles(obj){
+  let files = []
+  
+}
+
+console.log(getFiles(fileData))
