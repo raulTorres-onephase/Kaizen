@@ -1,0 +1,3 @@
+{"scripts": {
+    "stubapi": "json-server db.json"
+  }}
