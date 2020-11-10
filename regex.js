@@ -15,7 +15,7 @@ const detectPattern = (str) =>{
     let checkPoint = /^\d{3}\-\d{3}\-\d{4}$/;
     let result = checkPoint.test(numToBeChecked)
     if(!result){
-        return 'The strig does not match the pattern or has letters in it'
+        return 'The string does not match the pattern'
     } else {
         return 'The pattern is correct'
     }
