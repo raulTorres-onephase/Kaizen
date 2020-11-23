@@ -6,11 +6,11 @@
 // Rule 3: If a word starts with a consonant sound followed by "qu", move it to the end of the word, and then add an "ay" sound to the end of the word (e.g. "square" -> "aresquay").
 // Rule 4: If a word contains a "y" after a consonant cluster or as the second letter in a two letter word it makes a vowel sound (e.g. "rhythm" -> "ythmrhay", "my" -> "ymay").
 
-const word = 'trash';
+const word = 'glove';
 
 const pigLatinTranlator = (sentence) => {
   let translation = '';
-  let vowelSound = ['a', 'e', 'i', 'o', 'u', 's'];
+  let vowelSound = ['a', 'e', 'i', 'o', 'u'];
 
   for (let i = 0; i < sentence.length; i++) {
     if (sentence[0] === vowelSound[i]) {
