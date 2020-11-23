@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Counter from './Counter';
+import SecondCounter from './SecondCounter';
+import Total from './Total';
 
 function App() {
+  const [counter, setCounter] = useState(0);
+  const [counter2, setCounter2] = useState(0);
+
+  const onIncrement = () => {
+    setCounter(counter + 1);
+  };
+
+  const onDecrement = () => {
+    setCounter(counter - 1);
+  };
+  const onIncrement2 = () => {
+    setCounter2(counter2 + 1);
+  };
+
+  const onDecrement2 = () => {
+    setCounter2(counter2 - 1);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Counter App</h1>
+      <Counter
+        counter={counter}
+        onIncrement={onIncrement}
+        onDecrement={onDecrement}
+      />
+      <SecondCounter
+        counter2={counter2}
+        onIncrement2={onIncrement2}
+        onDecrement2={onDecrement2}
+      />
+      <Total counter={counter} counter2={counter2} />
     </div>
   );
 }
